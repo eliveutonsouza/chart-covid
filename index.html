@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Covid-19</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <section class="main">
+        <img
+          src="./public/images/covid3d.png"
+          alt="Imagem do vírus em 3D"
+          class="imagem__virus"
+        />
+        <h1>Situação da COVID-19</h1>
+        <p>
+          À medida que a COVID-19 continua a impactar o mundo, manter-se
+          informado é a nossa principal arma contra o vírus.
+        </p>
+        <a href="https://github.com/KaianNovais">
+          <img
+            src="./public/images/logoXP.png"
+            alt="Logo da XP"
+            class="logo__xp"
+          />
+          Por: Kaian Novais</a
+        >
+      </section>
+      <img
+        class="imagem__grafico"
+        src="./public/images/covid.png"
+        alt="Imagem ilustrativa do gráfico da covid"
+      />
+    </header>
+
+    <main class="chart-container">
+      <div>
+        <h2>Gráfico de casos de COVID-19</h2>
+        <form class="form-filter">
+          <div class="group-input">
+            <label for="country">Selecione um pais:</label>
+            <select name="country" id="country">
+              <option value="BRA">Brasil</option>
+              <option value="BRA">Brasil</option>
+              <option value="BRA">Brasil</option>
+            </select>
+          </div>
+
+          <div class="group-input">
+            <label for="period">Selecione a Data:</label>
+            <input type="date" name="period" id="period" />
+          </div>
+
+          <div class="group-input">
+            <button type="submit" id="btnSearch">Gerar Relatório</button>
+          </div>
+
+          <!-- <div class="group-input">
+            <label for="final-period">Data inicial:</label>
+            <input type="date" name="final-period" id="final-period" />
+          </div> -->
+        </form>
+      </div>
+      <canvas id="ChartComponent"></canvas>
+    </main>
+
+    <footer>
+      <img src="./public/images/logoXP.png" alt="Logo da XP" class="logo__xp" />
+      <h4>Por: Kaian Novais</h4>
+    </footer>
+
+    <script type="module" src="./src/scripts/chart.js"></script>
+  </body>
+</html>
