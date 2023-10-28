@@ -7,7 +7,7 @@
 
 .form-filter {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   margin-bottom: 2rem;
 }
@@ -15,7 +15,12 @@
 .group-input {
   display: flex;
   flex-direction: column;
+  align-self: flex-end;
   gap: 1rem;
+}
+
+.group-input label {
+  display: none;
 }
 
 .group-input select {
@@ -44,4 +49,11 @@
   border-radius: 0.5rem;
   outline: none;
   font-family: Lato, sans-serif;
+}
+
+#ChartComponent {
+  height: 30rem !important;
+  width: 30rem !important;
+
+  margin: 5rem auto;
 }

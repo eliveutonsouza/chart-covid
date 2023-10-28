@@ -1,12 +1,13 @@
 import api from "../services/api.js";
 
 const formFilter = document.querySelector("form");
+let chartApiCOVID = null;
 
 async function generateDataForDateAndLocation(event) {
   event.preventDefault();
 
-  const period = document.querySelector("#period").value;
-  const country = document.querySelector("#country").value;
+  let period = document.querySelector("#period").value;
+  const country = "BRA";
 
   await api
     .get(`total?date=${period}&iso=${country}`)
@@ -24,8 +25,8 @@ formFilter.addEventListener("submit", generateDataForDateAndLocation);
 function generateChart({ confirmed, deaths, recovered }) {
   const chartDoughnut = document.getElementById("ChartComponent");
 
-  if (!chartDoughnut) {
-    chartDoughnut.destroy();
+  if (chartApiCOVID) {
+    chartApiCOVID.destroy();
   }
 
   const dataChart = {
@@ -44,7 +45,7 @@ function generateChart({ confirmed, deaths, recovered }) {
     ],
   };
 
-  new Chart(chartDoughnut, {
+  chartApiCOVID = new Chart(chartDoughnut, {
     type: "doughnut",
     data: dataChart,
   });
