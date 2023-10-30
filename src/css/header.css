@@ -9,10 +9,6 @@ header {
   display: flex;
 }
 
-.imagem__grafico {
-  /* max-width: 100%; */
-  height: auto;
-}
 .main {
   display: flex;
   flex-direction: column;
@@ -24,23 +20,17 @@ header {
 }
 
 h1 {
-  grid-row: 2/3;
-  grid-column: 2/7;
   font-family: Lato;
   font-size: 3rem;
   color: white;
 }
 p {
-  grid-row: 3/6;
-  grid-column: 2/5;
   font-family: Roboto;
   font-size: 1.5rem;
   color: #c7b6e7;
   max-width: 50rem;
 }
 a {
-  grid-row-start: 5;
-  grid-column: 2/5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,8 +42,6 @@ a {
   text-decoration: none;
 }
 a:hover {
-  grid-row-start: 5;
-  grid-column: 2/5;
   display: flex;
   justify-content: center;
   align-items: center;
