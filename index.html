@@ -4,42 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>API Covid-19</title>
+
     <link rel="stylesheet" href="./src/css/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <header>
+      <img
+        src="./public/images/covid3d.png"
+        alt="Imagem do vírus em 3D"
+        class="imagem__virus"
+      />
       <section class="main">
-        <img
-          src="./public/images/covid3d.png"
-          alt="Imagem do vírus em 3D"
-          class="imagem__virus"
-        />
         <h1>Situação da COVID-19</h1>
         <p>
           À medida que a COVID-19 continua a impactar o mundo, manter-se
           informado é a nossa principal arma contra o vírus.
         </p>
-        <a href="https://github.com/KaianNovais">
-          <img
-            src="./public/images/logoXP.png"
-            alt="Logo da XP"
-            class="logo__xp"
-          />
-          Por: Kaian Novais</a
-        >
       </section>
-      <img
-        class="imagem__grafico"
-        src="./public/images/covid.png"
-        alt="Imagem ilustrativa do gráfico da covid"
-      />
     </header>
 
     <main class="chart-container">
       <div>
-        <h2>Gráfico de casos de COVID-19</h2>
+        <h2>Gráfico de casos de COVID-19 (Brasil)</h2>
 
         <form class="form-filter">
           <!-- <div class="group-input">
@@ -66,9 +52,11 @@
 
     <footer>
       <img src="./public/images/logoXP.png" alt="Logo da XP" class="logo__xp" />
-      <h4>Por: Kaian Novais</h4>
+      <h4>Adaptado Por: Eliveuton Souza</h4>
     </footer>
 
-    <script type="module" src="./src/scripts/chart.js"></script>
+    <script type="module" src="./src/js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </body>
 </html>

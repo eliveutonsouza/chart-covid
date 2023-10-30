@@ -3,6 +3,13 @@
   width: 62.5rem;
   padding: 0 1rem;
   margin: 0 auto;
+
+  min-height: calc(100vh - 70px - 200px);
+}
+
+.chart-container h2 {
+  margin: 0;
+  padding: 2.5rem 0;
 }
 
 .form-filter {
@@ -52,8 +59,21 @@
 }
 
 #ChartComponent {
-  height: 30rem !important;
-  width: 30rem !important;
+  height: 25rem !important;
+  width: 25rem !important;
 
-  margin: 5rem auto;
+  margin: 0rem auto;
+}
+
+.loading {
+  position: fixed;
+  top: 50%;
+  left: calc(50% - 10rem);
+  height: 10rem;
+  width: 20rem;
+  background: #020103;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
