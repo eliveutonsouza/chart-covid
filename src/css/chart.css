@@ -71,9 +71,13 @@
   left: calc(50% - 10rem);
   height: 10rem;
   width: 20rem;
-  background: #020103;
+  background: #8b52ff;
   border-radius: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.loadingParagraph {
+  color: #fff;
 }

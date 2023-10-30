@@ -5,8 +5,18 @@ import { addLoadingInPage } from "./module/loading.js";
 
 // Enforcement of imports
 function initializeApp() {
-  // Generates the Chart
+  // Initialize Default
   const formFilter = document.querySelector("form");
+
+  let dataReportsTotal = {
+    confirmed: 1,
+    deaths: 1,
+    recovered: 1,
+    active: 1,
+  };
+
+  const ChartComponentHTML = document.querySelector("#ChartComponent");
+  generateChart(ChartComponentHTML, dataReportsTotal, "doughnut");
 
   // Capture Submit event in the form
   formFilter.addEventListener("submit", async (event) => {
@@ -27,10 +37,9 @@ function initializeApp() {
 
     // Processing the data for Chart
     const { confirmed, deaths, recovered, active } = dataApi.data.data;
-    const dataReportsTotal = { confirmed, deaths, recovered, active };
+    dataReportsTotal = { confirmed, deaths, recovered, active };
 
     // Initialize Chart
-    const ChartComponentHTML = document.querySelector("#ChartComponent");
     generateChart(ChartComponentHTML, dataReportsTotal, "doughnut");
   });
 }
